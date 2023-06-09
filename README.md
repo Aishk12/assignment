@@ -1,1 +1,1 @@
-Click on "assign.html" to open the assignment.
+Click on "index.html" to open the assignment.
