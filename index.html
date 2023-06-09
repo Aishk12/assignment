@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>XYZ Traders</title>
+    <style type="text/css">
+        body{
+           text-align: center;
+            margin: 0px;
+            padding: 0px;
+            font-family:'Times New Roman', Times, serif;
+            background:Linear-gradient(120deg,rgb(21, 145, 75),#8e44ad);
+            height: 100vh;
+            overflow-y: scroll;
+        }
+        h1{
+            font-size: 80px;
+        }
+        
+        th{
+            width:200px;
+            height: 50px;
+    
+        }
+        tr{
+            height:100px;
+        }
+        tr[data-href]{
+            cursor: pointer;
+            
+        }
+        
+            </style>
+        </head>
+        <body>
+            <h1>
+            XYZ TRADERS</h1>
+            <h5>(click on the desired product name to view the data of that product)</h5>
+            
+            <table bgcolor="black" align="center">
+                <tr bgcolor="grey">
+                <th>Product Name</th>
+                <th>Product Data</th></tr>
+                <tr data-href="https://docs.google.com/spreadsheets/d/1X7lDaSbqfn0SnYIOiKSJVDavSqWdKM3Kw5bOg5ynkcU/edit?usp=sharing" bgcolor="lightgrey">
+                    <td>Smartphone</td>
+                    <td>smartphoneproductdata</td>
+                </tr>
+                <tr data-href="https://docs.google.com/spreadsheets/d/1dV8WKZM_dvVlnDhohosk_nPsND15aJCpqJrj1n46Ses/edit?usp=sharing" bgcolor="lightgrey" >
+                    <td>Fan</td>
+                    <td>fanproductdata</td>
+                </tr>
+                <tr data-href="https://docs.google.com/spreadsheets/d/10I4JsLwpDXYoqcfx-pt9HsKI5JhlITf0uQpKBtHL-fM/edit?usp=sharing"bgcolor="lightgrey">
+                    <td>Lightbulb</td>
+                    <td>lightbulbproductdata</td>
+                </tr>
+                <tr data-href="https://docs.google.com/spreadsheets/d/1VQ_BHE1gbW8l7sSx2ip6V2e2B4Mi0q3YWGRhA-uqDPU/edit?usp=sharing" bgcolor="lightgrey">
+                    <td>Refrigerator</td>
+                    <td>refrigeratorproductdata</td>
+                </tr>
+                <tr data-href="https://docs.google.com/spreadsheets/d/1MOeYPAcdUeJWbB6AE_J_ZLRhvUot6wKXhC-61tV7iKE/edit?usp=sharing" bgcolor="lightgrey">
+                    <td>Television</td>
+                    <td>televisionproductdata</td>
+                </tr>
+            </table>
+            <script>
+                document.addEventListener("DOMContentLoaded",()=>{
+                    const rows=document.querySelectorAll("tr[data-href]");
+                    rows.forEach(row=>{
+                        row.addEventListener("click",()=>{
+                            window.location.href=row.dataset.href;
+                        });
+                    });
+                });
+            </script>
+            </body>
+            
+</html>
